@@ -1,0 +1,60 @@
+/* 1. Change to Tailwind v3 Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Custom Utility (Standard CSS) */
+.text-hero {
+  font-size: 71px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* 3. Variables and Base Styles */
+:root {
+  --background: #000000;
+  --foreground: #ededed;
+  --font-space: 'Space Grotesk', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 4. Portfolio Components */
+.item-wrapper {
+  position: absolute;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.item-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #1a1a1a;
+  filter: brightness(0.7);
+}
+
+.item-img img {
+  transition: filter 0.3s ease;
+}
+
+.item-wrapper:hover .item-img {
+  filter: brightness(1);
+}
+
+.color-overlay {
+  position: absolute;
+  inset: 0;
+  background: #8C7851;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 8px;
+}
